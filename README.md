@@ -1,4 +1,4 @@
-# grunt-strip-comments
+# grunt-stripcomments
 
 > Remove comments from production ready code
 
@@ -17,7 +17,7 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-stripcomments');
 ```
 
-## The "strip_comments" task
+## The "comments" task
 
 ### Overview
 In your project's Gruntfile, add a section named `comments` to the data object passed into `grunt.initConfig()`.
