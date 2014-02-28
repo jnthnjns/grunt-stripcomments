@@ -1,7 +1,7 @@
 {
   "name": "grunt-stripcomments",
   "description": "Remove comments from production code",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/kkemple/grunt-stripcomments",
   "author": {
     "name": "Kurtis Kemple",
