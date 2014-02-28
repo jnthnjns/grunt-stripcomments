@@ -15,8 +15,8 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('comments', 'Remove comments from production code', function() {
 
-    var mulitlineComment = /\/*[^]*+([^\/][^*]\+)*\//g;
-    var singleLineComment = /\/\/.+/g;
+    var multilineComment = /\/\*[\s\S]*?\*\//g;
+    var singleLineComment = /\/\/.*/g;
 
     var options = this.options({
       singleline: true,
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
       var contents = grunt.file.read(file);
 
       if ( options.multiline ) {
-         contents = contents.replace(mulitlineComment, '');
+         contents = contents.replace(multilineComment, '');
       }
 
       if ( options.singleline ) {
