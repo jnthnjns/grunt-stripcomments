@@ -1,7 +1,7 @@
 {
-  "name": "grunt-stripcomments",
-  "description": "Remove comments from production code",
-  "version": "0.3.1",
+  "name": "grunt-stripcomments-hotfix",
+  "description": "Remove comments from production code. Hotfix version of normal grunt-stripcomments 0.3.1 version with edited regexes.",
+  "version": "0.3.2",
   "homepage": "https://github.com/kkemple/grunt-stripcomments",
   "author": {
     "name": "Kurtis Kemple",

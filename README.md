@@ -78,4 +78,5 @@ grunt.initConfig({
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+v 0.3.2 - Hotfix by Tobias Brenner -> edited redex
 v 0.1.0 - alpha release
