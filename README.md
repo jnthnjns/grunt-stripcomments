@@ -1,6 +1,8 @@
 # grunt-stripcomments
 
-> Remove comments from production ready code
+[![Circle CI](https://circleci.com/gh/kkemple/grunt-stripcomments/tree/master.svg?style=svg)](https://circleci.com/gh/kkemple/grunt-stripcomments/tree/master)
+
+> Remove comments from code
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
