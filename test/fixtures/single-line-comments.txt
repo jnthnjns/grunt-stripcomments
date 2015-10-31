@@ -1,0 +1,9 @@
+this is a string
+
+// this is a comment
+
+function () {
+  var something; // oops bad comment here
+}
+
+    // indented comment here
