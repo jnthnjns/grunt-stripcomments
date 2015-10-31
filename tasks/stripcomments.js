@@ -6,36 +6,33 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
+ var chalk = require('chalk');
+ var stripFileFactory = require('../lib/strip-file-factory');
 
-module.exports = function(grunt) {
+ module.exports = function (grunt) {
+   // Please see the Grunt documentation for more information regarding task
+   // creation: http://gruntjs.com/creating-tasks
 
-  // Please see the Grunt documentation for more information regarding task
-  // creation: http://gruntjs.com/creating-tasks
+   grunt.registerMultiTask(
+     'comments',
+     'Remove comments from production code',
+     function () {
+       var options = this.options({
+         singleline: true,
+         multiline: true,
+       })
 
-  grunt.registerMultiTask('comments', 'Remove comments from production code', function() {
+       this.files.forEach(function (file) {
+         var src = file.src.filter(function (filepath) {
+           if (!grunt.file.exists(filepath)) {
+             grunt.log.warn('Source file ' + chalk.cyan(filepath) + ' not found.')
+             return false
+           }
 
-    var multilineComment = /\/\*\*[^!][\s\S]*?\*\/\n/gm;
-    var singleLineComment = /^\s*\t*(\/\/)[^\n\r]*[\n\r]/gm;
+           return true
+         })
 
-    var options = this.options({
-      singleline: true,
-      multiline: true
-    });
-
-    this.files[0].src.forEach(function (file) {
-
-      var contents = grunt.file.read(file);
-
-      if ( options.multiline ) {
-         contents = contents.replace(multilineComment, '');
-      }
-
-      if ( options.singleline ) {
-         contents = contents.replace(singleLineComment, '');
-      }
-
-      grunt.file.write(file, contents);
-    });
-  });
-};
+         src.forEach(stripFileFactory(grunt, options))
+       })
+     })
+ }

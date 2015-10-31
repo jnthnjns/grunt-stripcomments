@@ -1,0 +1,16 @@
+this is a string
+
+  /* this is a single asterisk comment */
+
+/** this is a double asterisk comment */
+
+/* ===================================
+  this is a title comment
+=================================== */
+
+    /**
+     * this is a test comment
+     *
+     */
+
+/\/*[a-z]\\*/
