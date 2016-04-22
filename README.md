@@ -1,5 +1,7 @@
 # grunt-stripcomments
 
+> **This plugin is no longer actively developed, if anyone would like to take it over, please contact me either by issue, or by email: kurtiskemple@gmail.com**
+
 [![Circle CI](https://circleci.com/gh/kkemple/grunt-stripcomments/tree/master.svg?style=svg)](https://circleci.com/gh/kkemple/grunt-stripcomments/tree/master)
 
 > Remove comments from code
