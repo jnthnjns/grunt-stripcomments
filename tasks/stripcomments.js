@@ -1,8 +1,8 @@
 /*
  * grunt-strip-comments
- * https://github.com/kkemple/grunt-strip-comments
+ * https://github.com/jnthnjns/grunt-strip-comments
  *
- * Copyright (c) 2013 Kurtis Kemple
+ * Copyright (c) 2016 Jonathan Jones
  * Licensed under the MIT license.
  */
 

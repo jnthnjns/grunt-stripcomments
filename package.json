@@ -1,24 +1,24 @@
 {
   "name": "grunt-stripcomments",
   "description": "Remove comments from code",
-  "version": "0.5.0",
-  "homepage": "https://github.com/kkemple/grunt-stripcomments",
+  "version": "0.5.1",
+  "homepage": "https://github.com/jnthnjns/grunt-stripcomments",
   "author": {
-    "name": "Kurtis Kemple",
-    "email": "kurtiskemple@gmail.com",
-    "url": "http://kurtiskemple.com"
+    "name": "Jonathan Jones",
+    "email": "jon23781@gmail.com",
+    "url": ""
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/kkemple/grunt-stripcomments"
+    "url": "git://github.com/jnthnjns/grunt-stripcomments"
   },
   "bugs": {
-    "url": "https://github.com/kkemple/grunt-stripcomments/issues"
+    "url": "https://github.com/jnthnjns/grunt-stripcomments/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/kkemple/grunt-stripcomments/blob/master/LICENSE-MIT"
+      "url": "https://github.com/jnthnjns/grunt-stripcomments/blob/master/LICENSE-MIT"
     }
   ],
   "main": "lib/strip-comments.js",

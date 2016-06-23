@@ -1,8 +1,6 @@
 # grunt-stripcomments
 
-> **This plugin is no longer actively developed, if anyone would like to take it over, please contact me either by issue, or by email: kurtiskemple@gmail.com**
-
-[![Circle CI](https://circleci.com/gh/kkemple/grunt-stripcomments/tree/master.svg?style=svg)](https://circleci.com/gh/kkemple/grunt-stripcomments/tree/master)
+[![CircleCI](https://circleci.com/gh/jnthnjns/grunt-stripcomments.svg?style=svg)](https://circleci.com/gh/jnthnjns/grunt-stripcomments)
 
 > Remove comments from code
 
@@ -85,3 +83,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 - v 0.1.0 - alpha release
 
 - v 0.5.0 - update to support Grunt 1.0
+
+- v 0.5.1 - update ownership
