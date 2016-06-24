@@ -10,5 +10,4 @@ node_js:
   - "iojs"
 before_install:
   - npm install -g npm
-before_script:
-  - npm uninstall grunt
+  - npm install grunt-cli -g
