@@ -20,16 +20,16 @@
        })
 
        this.files.forEach(function (file) {
+
          var src = file.src.filter(function (filepath) {
            if (!grunt.file.exists(filepath)) {
              grunt.log.warn('Source file ' + chalk.cyan(filepath) + ' not found.')
              return false
            }
-
+           stripFileFactory(grunt, file, filepath, options)
            return true
          })
 
-         src.forEach(stripFileFactory(grunt, file, options))
-       })
+       }) 
      })
  }
