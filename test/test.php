@@ -12,7 +12,7 @@ $date = date('M DD YY', strtotime('2015-21-10'));
 // a single line comment
 
 function goBack () {
-	// to the future
+  // to the future
 }
 
 /**
@@ -27,12 +27,12 @@ function goBack () {
   * @return void
   */
 class BTTF {
-	private
-		$_date;
+  private
+    $_date;
 
-	public function __construct($date) {
-		$this->_date = $date;
-	}
+  public function __construct($date) {
+    $this->_date = $date;
+  }
 }
 
 ?>
