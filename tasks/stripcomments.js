@@ -20,6 +20,7 @@
        })
 
        this.files.forEach(function (file) {
+        
          var src = file.src.filter(function (filepath) {
            if (!grunt.file.exists(filepath)) {
              grunt.log.warn('Source file ' + chalk.cyan(filepath) + ' not found.')
@@ -28,7 +29,7 @@
 
            return true
          })
-
+         file = file.dest ? file : undefined;
          src.forEach(stripFileFactory(grunt, file, options))
        })
      })
