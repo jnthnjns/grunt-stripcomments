@@ -87,3 +87,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 - v 0.5.1 - update ownership
 
 - v 0.5.2 - added file destination support
+
+- v 0.5.3 - added node unit testing for specific file types

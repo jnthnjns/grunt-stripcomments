@@ -1,0 +1,24 @@
+/*!
+ * An important comment
+ * taking up
+ * multiple lines
+ */
+
+html, body {
+	// never understood why they would add this whitespace in the first place
+	margin: 0;
+	padding: 0;
+}
+
+
+.class {
+	// TODO: add more styles
+	width: 100%;
+	/* multiline comment style on single line */
+}
+
+#primary-menu {
+	/**
+	 * There is about to be a kick ass menu
+	 */
+}

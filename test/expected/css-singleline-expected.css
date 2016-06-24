@@ -1,0 +1,22 @@
+/*!
+ * An important comment
+ * taking up
+ * multiple lines
+ */
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+
+.class {
+	width: 100%;
+	/* multiline comment style on single line */
+}
+
+#primary-menu {
+	/**
+	 * There is about to be a kick ass menu
+	 */
+}
