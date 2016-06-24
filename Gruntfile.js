@@ -15,62 +15,55 @@ module.exports = function(grunt) {
       tests: ['tmp']
     },
 
+    copy: {
+      main: {
+        files: [
+        {src: ['test/test.css'], dest: 'tmp/multiline.css'},
+        {src: ['test/test.css'], dest: 'tmp/singleline.css'},
+        {src: ['test/test.js'], dest: 'tmp/multiline.js'},
+        {src: ['test/test.js'], dest: 'tmp/singleline.js'},
+        {src: ['test/test.php'], dest: 'tmp/multiline.php'},
+        {src: ['test/test.php'], dest: 'tmp/singleline.php'},
+        {expand: true, cwd: "test/js/", src: ['**'], dest: 'tmp/js/'},
+      ]
+      }
+    },
+
     comments: {
       css_singleline: {
-        options: {
-          singleline: true,
-          multiline: false
-        },
+        options: { singleline: true, multiline: false },
         files: {
           'tmp/singleline.css': [ 'test/test.css' ] 
         }
       },
       css_multiline: {
-        options: {
-          singleline: false,
-          multiline: true
-        },
+        options: { singleline: false, multiline: true },
         src: [ 'test/test.css' ],
         dest: 'tmp/multiline.css'
       },
-
-
       js_singleline: {
-        options: {
-          singleline: true,
-          multiline: false
-        },
+        options: { singleline: true, multiline: false },
         src: [ 'test/test.js' ],
         dest: 'tmp/singleline.js'
       },
       js_multiline: {
-        options: {
-          singleline: false,
-          multiline: true
-        },
+        options: { singleline: false, multiline: true },
         src: [ 'test/test.js' ],
         dest: 'tmp/multiline.js'
       },
-
       php_singleline: {
-        options: {
-          singleline: true,
-          multiline: false
-        },
+        options: { singleline: true, multiline: false },
         src: [ 'test/test.php' ],
         dest: 'tmp/singleline.php'
       },
       php_multiline: {
-        options: {
-          singleline: false,
-          multiline: true
-        },
+        options: { singleline: false, multiline: true },
         src: [ 'test/test.php' ],
         dest: 'tmp/multiline.php'
       },
 
       multiple_files: {
-        src: [ 'test/js/*.js' ]
+        src: [ 'tmp/js/*.js' ]
       }
     },
 
@@ -87,11 +80,13 @@ module.exports = function(grunt) {
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
   grunt.registerTask('test', function () {
     grunt.task.run('clean');
+    grunt.task.run('copy');
 
     // CSS
     grunt.task.run('comments:css_singleline');
@@ -108,6 +103,17 @@ module.exports = function(grunt) {
 
   grunt.registerTask('strip', function () {
     grunt.task.run('clean');
+    grunt.task.run('copy');
+    // CSS
+    grunt.task.run('comments:css_singleline');
+    grunt.task.run('comments:css_multiline');
+    // Javascript
+    grunt.task.run('comments:js_singleline');
+    grunt.task.run('comments:js_multiline');
+    // PHP
+    grunt.task.run('comments:php_singleline');
+    grunt.task.run('comments:php_multiline');
+    
     grunt.task.run('comments:multiple_files');
   });
 
