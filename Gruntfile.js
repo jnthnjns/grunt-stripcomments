@@ -67,6 +67,10 @@ module.exports = function(grunt) {
         },
         src: [ 'test/test.php' ],
         dest: 'tmp/multiline.php'
+      },
+
+      multiple_files: {
+        src: [ 'test/js/*.js' ]
       }
     },
 
@@ -100,6 +104,11 @@ module.exports = function(grunt) {
     grunt.task.run('comments:php_multiline');
 
     grunt.task.run('nodeunit');
+  });
+
+  grunt.registerTask('strip', function () {
+    grunt.task.run('clean');
+    grunt.task.run('comments:multiple_files');
   });
 
 };
