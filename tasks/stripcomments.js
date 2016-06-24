@@ -6,12 +6,9 @@
  * Licensed under the MIT license.
  */
 
- var chalk = require('chalk');
- var stripFileFactory = require('../lib/strip-file-factory');
-
  module.exports = function (grunt) {
-   // Please see the Grunt documentation for more information regarding task
-   // creation: http://gruntjs.com/creating-tasks
+  var chalk = require('chalk');
+  var stripFileFactory = require('../lib/strip-file-factory');
 
    grunt.registerMultiTask(
      'comments',
@@ -32,7 +29,7 @@
            return true
          })
 
-         src.forEach(stripFileFactory(grunt, options))
+         src.forEach(stripFileFactory(grunt, file, options))
        })
      })
  }

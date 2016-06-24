@@ -85,3 +85,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 - v 0.5.0 - update to support Grunt 1.0
 
 - v 0.5.1 - update ownership
+
+- v 0.5.2 - added file destination support
