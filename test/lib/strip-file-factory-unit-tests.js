@@ -82,5 +82,32 @@ exports.comments = {
     test.equal(actual, expected, 'Remove multiline comments from PHP.');
 
     test.done();
+  },
+  multiple_files_first: function (test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/multifile/config_test.js');
+    var expected = grunt.file.read('test/expected/multifile/config.js');
+    test.equal(actual, expected, 'Remove all comments from multiple files.');
+
+    test.done();
+  },
+  multiple_files_second: function (test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/multifile/file_test.js');
+    var expected = grunt.file.read('test/expected/multifile/file.js');
+    test.equal(actual, expected, 'Remove all comments from multiple files.');
+
+    test.done();
+  },
+  single_file: function (test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/singlefile.php');
+    var expected = grunt.file.read('test/expected/singlefile.php');
+    test.equal(actual, expected, 'Remove all comments from single file.');
+
+    test.done();
   }
 };

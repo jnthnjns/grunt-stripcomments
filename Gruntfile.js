@@ -24,7 +24,8 @@ module.exports = function(grunt) {
         {src: ['test/test.js'], dest: 'tmp/singleline.js'},
         {src: ['test/test.php'], dest: 'tmp/multiline.php'},
         {src: ['test/test.php'], dest: 'tmp/singleline.php'},
-        {expand: true, cwd: "test/js/", src: ['**'], dest: 'tmp/js/'},
+        {src: ['test/test.php'], dest: 'tmp/singlefile.php'},
+        {expand: true, cwd: "test/fixtures/multifile/", src: ['**'], dest: 'tmp/multifile/'},
       ]
       }
     },
@@ -63,7 +64,10 @@ module.exports = function(grunt) {
       },
 
       multiple_files: {
-        src: [ 'tmp/js/*.js' ]
+        src: [ 'tmp/multifile/*.js' ]
+      },
+      single_file: {
+        src: [ 'tmp/singlefile.php' ]
       }
     },
 
@@ -82,6 +86,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
+  grunt.registerTask('cleanup', ['clean']);
+
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
   grunt.registerTask('test', function () {
@@ -98,6 +104,9 @@ module.exports = function(grunt) {
     grunt.task.run('comments:php_singleline');
     grunt.task.run('comments:php_multiline');
 
+    grunt.task.run('comments:single_file');
+    grunt.task.run('comments:multiple_files');
+
     grunt.task.run('nodeunit');
   });
 
@@ -113,8 +122,8 @@ module.exports = function(grunt) {
     // PHP
     grunt.task.run('comments:php_singleline');
     grunt.task.run('comments:php_multiline');
-    
+
+    grunt.task.run('comments:single_file');
     grunt.task.run('comments:multiple_files');
   });
-
 };
