@@ -1,5 +1,7 @@
 # grunt-stripcomments
 
+[![Build Status](https://travis-ci.org/jnthnjns/grunt-stripcomments.svg?branch=master)](https://travis-ci.org/jnthnjns/grunt-stripcomments)
+[![Dependency Status](https://gemnasium.com/badges/github.com/jnthnjns/grunt-stripcomments.svg)](https://gemnasium.com/github.com/jnthnjns/grunt-stripcomments)
 [![CircleCI](https://circleci.com/gh/jnthnjns/grunt-stripcomments.svg?style=svg)](https://circleci.com/gh/jnthnjns/grunt-stripcomments)
 
 > Remove comments from code
