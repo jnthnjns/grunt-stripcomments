@@ -1,7 +1,7 @@
 {
   "name": "grunt-stripcomments",
   "description": "Remove comments from code",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "homepage": "https://github.com/jnthnjns/grunt-stripcomments",
   "author": {
     "name": "Jonathan Jones",
@@ -29,17 +29,11 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
-    "chai": "^3.4.0",
-    "eslint": "^1.7.3",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-react": "^3.6.3",
+    "eol": "^0.8.1",
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-nodeunit": "^1.0.0",
-    "mocha": "^3.2.0",
-    "sinon": "^1.17.2"
+    "grunt-contrib-nodeunit": "^1.0.0"
   },
   "peerDependencies": {
     "grunt": ">=0.4.0"
@@ -53,6 +47,6 @@
     "remove comments"
   ],
   "dependencies": {
-    "chalk": "^1.1.1"
+    "chalk": "^1.1.3"
   }
 }

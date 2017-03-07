@@ -102,3 +102,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 - v 0.7.0 - added support for special comments
 
 - v 0.7.1 - lint update
+
+- v 0.7.2 - EOL bug fix in unit tests

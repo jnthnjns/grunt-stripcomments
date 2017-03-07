@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          {src: ['test/fixtures/test.css'], dest: 'tmp/css_special_comments.css'},
+          {src: ['test/fixtures/special-comments.txt'], dest: 'tmp/special-comments.txt'},
           {src: ['test/fixtures/test.css'], dest: 'tmp/multiline.css'},
           {src: ['test/fixtures/test.css'], dest: 'tmp/singleline.css'},
           {src: ['test/fixtures/test.js'], dest: 'tmp/multiline.js'},
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
       css_special_comments: {
         options: { keepSpecialComments: false, singleline: false, multiline: false },
         files: {
-          'tmp/css_special_comments.css': [ 'test/fixtures/test.css' ]
+          'tmp/special-comments.txt': [ 'test/fixtures/special-comments.txt' ]
         }
       },
       css_singleline: {
