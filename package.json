@@ -1,7 +1,7 @@
 {
   "name": "grunt-stripcomments",
   "description": "Remove comments from code",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "homepage": "https://github.com/jnthnjns/grunt-stripcomments",
   "author": {
     "name": "Jonathan Jones",

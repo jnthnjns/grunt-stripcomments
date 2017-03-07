@@ -25,6 +25,16 @@ exports.comments = {
     done();
   },
 
+  css_special_comments: function (test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/css_special_comments.css');
+    var expected = grunt.file.read('test/expected/css-special-comments.css');
+    test.equal(actual, expected, 'Remove special comments from CSS.');
+
+    test.done();
+  },
+
   css_singleline: function (test) {
     test.expect(1);
 
@@ -55,6 +65,7 @@ exports.comments = {
 
     test.done();
   },
+  
   js_multiline: function (test) {
     test.expect(1);
 
@@ -74,6 +85,7 @@ exports.comments = {
 
     test.done();
   },
+
   php_multiline: function (test) {
     test.expect(1);
 
@@ -83,6 +95,7 @@ exports.comments = {
 
     test.done();
   },
+
   multiple_files_first: function (test) {
     test.expect(1);
 
@@ -92,6 +105,7 @@ exports.comments = {
 
     test.done();
   },
+
   multiple_files_second: function (test) {
     test.expect(1);
 
@@ -101,6 +115,7 @@ exports.comments = {
 
     test.done();
   },
+
   single_file: function (test) {
     test.expect(1);
 

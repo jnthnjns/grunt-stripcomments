@@ -18,19 +18,30 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-        {src: ['test/fixtures/test.css'], dest: 'tmp/multiline.css'},
-        {src: ['test/fixtures/test.css'], dest: 'tmp/singleline.css'},
-        {src: ['test/fixtures/test.js'], dest: 'tmp/multiline.js'},
-        {src: ['test/fixtures/test.js'], dest: 'tmp/singleline.js'},
-        {src: ['test/fixtures/test.php'], dest: 'tmp/multiline.php'},
-        {src: ['test/fixtures/test.php'], dest: 'tmp/singleline.php'},
-        {src: ['test/fixtures/test.php'], dest: 'tmp/singlefile.php'},
-        {expand: true, cwd: "test/fixtures/multifile/", src: ['**'], dest: 'tmp/multifile/'},
-      ]
+          {src: ['test/fixtures/test.css'], dest: 'tmp/css_special_comments.css'},
+
+          {src: ['test/fixtures/test.css'], dest: 'tmp/multiline.css'},
+          {src: ['test/fixtures/test.css'], dest: 'tmp/singleline.css'},
+          
+          {src: ['test/fixtures/test.js'], dest: 'tmp/multiline.js'},
+          {src: ['test/fixtures/test.js'], dest: 'tmp/singleline.js'},
+          
+          {src: ['test/fixtures/test.php'], dest: 'tmp/multiline.php'},
+          {src: ['test/fixtures/test.php'], dest: 'tmp/singleline.php'},
+          {src: ['test/fixtures/test.php'], dest: 'tmp/singlefile.php'},
+          
+          {expand: true, cwd: "test/fixtures/multifile/", src: ['**'], dest: 'tmp/multifile/'},
+        ]
       }
     },
 
     comments: {
+      css_special_comments: {
+        options: { keepSpecialComments: false, singleline: false, multiline: false },
+        files: {
+          'tmp/css_special_comments.css': [ 'test/fixtures/test.css' ]
+        }
+      },
       css_singleline: {
         options: { singleline: true, multiline: false },
         files: {
@@ -94,6 +105,9 @@ module.exports = function(grunt) {
     grunt.task.run('clean');
     grunt.task.run('copy');
 
+    // Special comments
+    grunt.task.run('comments:css_special_comments');
+    
     // CSS
     grunt.task.run('comments:css_singleline');
     grunt.task.run('comments:css_multiline');
