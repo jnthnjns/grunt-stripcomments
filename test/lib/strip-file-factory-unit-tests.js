@@ -1,5 +1,5 @@
 var grunt = require('grunt');
-
+var eol = require('eol');
 /*
   Test methods:
     test.expect(numAssertions)
@@ -16,11 +16,6 @@ var grunt = require('grunt');
     test.doesNotThrow(block, [error], [message])
     test.ifError(value)
 */
-
-function FixLineEndings (str) {
-  return str.replace(/(?:\r\n|\r|\n)/g, '\r\n');
-}
-
 exports.comments = {
   setUp: function(done) {
     // setup here if necessary
@@ -32,8 +27,8 @@ exports.comments = {
     var expected = grunt.file.read('test/expected/special-comments.txt');
     
     // Line endings fix in unit tests
-    actual = FixLineEndings(actual);
-    expected = FixLineEndings(expected);
+    actual = eol.auto(actual);
+    expected = eol.auto(expected);
 
     test.expect(1);
     test.equal(actual, expected, 'Remove special comments from CSS.');
@@ -45,8 +40,8 @@ exports.comments = {
     var expected = grunt.file.read('test/expected/css-singleline-expected.css');
 
     // Line endings fix in unit tests
-    actual = FixLineEndings(actual);
-    expected = FixLineEndings(expected);
+    actual = eol.auto(actual);
+    expected = eol.auto(expected);
 
     test.expect(1);
     test.equal(actual, expected, 'Remove singleline comments from CSS.');
@@ -58,8 +53,8 @@ exports.comments = {
     var expected = grunt.file.read('test/expected/css-multiline-expected.css');
 
     // Line endings fix in unit tests
-    actual = FixLineEndings(actual);
-    expected = FixLineEndings(expected);
+    actual = eol.auto(actual);
+    expected = eol.auto(expected);
 
     test.expect(1);
     test.equal(actual, expected, 'Remove multiline comments from CSS.');
@@ -72,8 +67,8 @@ exports.comments = {
     var expected = grunt.file.read('test/expected/js-singleline-expected.js');
 
     // Line endings fix in unit tests
-    actual = FixLineEndings(actual);
-    expected = FixLineEndings(expected);
+    actual = eol.auto(actual);
+    expected = eol.auto(expected);
     
     test.expect(1);
     test.equal(actual, expected, 'Remove singleline comments from JS.');
@@ -85,8 +80,8 @@ exports.comments = {
     var expected = grunt.file.read('test/expected/js-multiline-expected.js');
 
     // Line endings fix in unit tests
-    actual = FixLineEndings(actual);
-    expected = FixLineEndings(expected);
+    actual = eol.auto(actual);
+    expected = eol.auto(expected);
 
     test.expect(1);
     test.equal(actual, expected, 'Remove multiline comments from JS.');
@@ -98,8 +93,8 @@ exports.comments = {
     var expected = grunt.file.read('test/expected/php-singleline-expected.php');
 
     // Line endings fix in unit tests
-    actual = FixLineEndings(actual);
-    expected = FixLineEndings(expected);
+    actual = eol.auto(actual);
+    expected = eol.auto(expected);
 
     test.expect(1);
     test.equal(actual, expected, 'Remove singleline comments from PHP.');
@@ -111,8 +106,8 @@ exports.comments = {
     var expected = grunt.file.read('test/expected/php-multiline-expected.php');
 
     // Line endings fix in unit tests
-    actual = FixLineEndings(actual);
-    expected = FixLineEndings(expected);
+    actual = eol.auto(actual);
+    expected = eol.auto(expected);
 
     test.expect(1);
     test.equal(actual, expected, 'Remove multiline comments from PHP.');
@@ -124,8 +119,8 @@ exports.comments = {
     var expected = grunt.file.read('test/expected/multifile/config.js');
 
     // Line endings fix in unit tests
-    actual = FixLineEndings(actual);
-    expected = FixLineEndings(expected);
+    actual = eol.auto(actual);
+    expected = eol.auto(expected);
 
     test.expect(1);
     test.equal(actual, expected, 'Remove all comments from multiple files.');
@@ -137,8 +132,8 @@ exports.comments = {
     var expected = grunt.file.read('test/expected/multifile/file.js');
 
     // Line endings fix in unit tests
-    actual = FixLineEndings(actual);
-    expected = FixLineEndings(expected);
+    actual = eol.auto(actual);
+    expected = eol.auto(expected);
 
     test.expect(1);
     test.equal(actual, expected, 'Remove all comments from multiple files.');
@@ -150,8 +145,8 @@ exports.comments = {
     var expected = grunt.file.read('test/expected/singlefile.php');
 
     // Line endings fix in unit tests
-    actual = FixLineEndings(actual);
-    expected = FixLineEndings(expected);
+    actual = eol.auto(actual);
+    expected = eol.auto(expected);
 
     test.expect(1);
     test.equal(actual, expected, 'Remove all comments from single file.');
