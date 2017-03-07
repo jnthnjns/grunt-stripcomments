@@ -33,7 +33,8 @@ grunt.initConfig({
       // Target-specific file lists and/or options go here.
       options: {
           singleline: true,
-          multiline: true
+          multiline: true,
+          keepSpecialComments: false
       },
       src: [ 'src/*.js'] // files to remove comments from
     },
@@ -42,6 +43,14 @@ grunt.initConfig({
 ```
 
 ### Options
+
+#### options.keepSpecialComments
+Type: `Boolean`
+Default value: `true`
+
+Determines whether or not to remove comments starting with `/*!`.
+
+**Note:** NO special comments should be removed if the code is not yours. Special comments are used as attribution and you should consult with the authors before even considering stripping them from the source.
 
 #### options.singleline
 Type: `Boolean`
@@ -89,3 +98,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 - v 0.5.1 - update ownership
 
 - v 0.6.0 - added support for file destination and nodeunit testing
+
+- v 0.7.0 - added support for special comments
+
+- v 0.7.1 - lint update

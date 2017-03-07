@@ -1,5 +1,3 @@
-'use strict';
-
 var grunt = require('grunt');
 
 /*
@@ -25,89 +23,94 @@ exports.comments = {
     done();
   },
 
-  css_singleline: function (test) {
-    test.expect(1);
+  css_special_comments: function (test) {
+    var actual = grunt.file.read('tmp/css_special_comments.css');
+    var expected = grunt.file.read('test/expected/css-special-comments.css');
 
+    test.expect(1);
+    test.equal(actual, expected, 'Remove special comments from CSS.');
+    test.done();
+  },
+
+  css_singleline: function (test) {
     var actual = grunt.file.read('tmp/singleline.css');
     var expected = grunt.file.read('test/expected/css-singleline-expected.css');
-    test.equal(actual, expected, 'Remove singleline comments from CSS.');
 
+    test.expect(1);
+    test.equal(actual, expected, 'Remove singleline comments from CSS.');
     test.done();
   },
 
   css_multiline: function (test) {
-    test.expect(1);
-
     var actual = grunt.file.read('tmp/multiline.css');
     var expected = grunt.file.read('test/expected/css-multiline-expected.css');
-    test.equal(actual, expected, 'Remove multiline comments from CSS.');
 
+    test.expect(1);
+    test.equal(actual, expected, 'Remove multiline comments from CSS.');
     test.done();
   },
 
 
   js_singleline: function (test) {
-    test.expect(1);
-
     var actual = grunt.file.read('tmp/singleline.js');
     var expected = grunt.file.read('test/expected/js-singleline-expected.js');
+    
+    test.expect(1);
     test.equal(actual, expected, 'Remove singleline comments from JS.');
-
     test.done();
   },
+  
   js_multiline: function (test) {
-    test.expect(1);
-
     var actual = grunt.file.read('tmp/multiline.js');
     var expected = grunt.file.read('test/expected/js-multiline-expected.js');
-    test.equal(actual, expected, 'Remove multiline comments from JS.');
 
+    test.expect(1);
+    test.equal(actual, expected, 'Remove multiline comments from JS.');
     test.done();
   },
 
   php_singleline: function (test) {
-    test.expect(1);
-
     var actual = grunt.file.read('tmp/singleline.php');
     var expected = grunt.file.read('test/expected/php-singleline-expected.php');
-    test.equal(actual, expected, 'Remove singleline comments from PHP.');
 
+    test.expect(1);
+    test.equal(actual, expected, 'Remove singleline comments from PHP.');
     test.done();
   },
-  php_multiline: function (test) {
-    test.expect(1);
 
+  php_multiline: function (test) {
     var actual = grunt.file.read('tmp/multiline.php');
     var expected = grunt.file.read('test/expected/php-multiline-expected.php');
-    test.equal(actual, expected, 'Remove multiline comments from PHP.');
 
+    test.expect(1);
+    test.equal(actual, expected, 'Remove multiline comments from PHP.');
     test.done();
   },
-  multiple_files_first: function (test) {
-    test.expect(1);
 
+  multiple_files_first: function (test) {
     var actual = grunt.file.read('tmp/multifile/config_test.js');
     var expected = grunt.file.read('test/expected/multifile/config.js');
-    test.equal(actual, expected, 'Remove all comments from multiple files.');
 
+    test.expect(1);
+    test.equal(actual, expected, 'Remove all comments from multiple files.');
     test.done();
   },
-  multiple_files_second: function (test) {
-    test.expect(1);
 
+  multiple_files_second: function (test) {
     var actual = grunt.file.read('tmp/multifile/file_test.js');
     var expected = grunt.file.read('test/expected/multifile/file.js');
-    test.equal(actual, expected, 'Remove all comments from multiple files.');
 
+    test.expect(1);
+    test.equal(actual, expected, 'Remove all comments from multiple files.');
     test.done();
   },
-  single_file: function (test) {
-    test.expect(1);
 
+  single_file: function (test) {
     var actual = grunt.file.read('tmp/singlefile.php');
     var expected = grunt.file.read('test/expected/singlefile.php');
-    test.equal(actual, expected, 'Remove all comments from single file.');
 
+    test.expect(1);
+    test.equal(actual, expected, 'Remove all comments from single file.');
     test.done();
   }
 };
