@@ -100,3 +100,5 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 - v 0.6.0 - added support for file destination and nodeunit testing
 
 - v 0.7.0 - added support for special comments
+
+- v 0.7.1 - lint update
