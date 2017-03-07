@@ -1,5 +1,4 @@
 
-
 this is a string
 
   /* this is a single asterisk comment */
