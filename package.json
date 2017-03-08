@@ -26,14 +26,15 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "jasmine-node spec"
   },
   "devDependencies": {
     "eol": "^0.8.1",
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-nodeunit": "^1.0.0"
+    "grunt-contrib-nodeunit": "^1.0.0",
+    "jasmine-node": "^1.14.5"
   },
   "peerDependencies": {
     "grunt": ">=0.4.0"

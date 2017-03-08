@@ -12,7 +12,6 @@ html, body {
 
 .class {
 	width: 100%;
-	/* multiline comment style on single line */
 }
 
 #primary-menu {
@@ -20,3 +19,4 @@ html, body {
 	 * There is about to be a kick ass menu
 	 */
 }
+.code {}
